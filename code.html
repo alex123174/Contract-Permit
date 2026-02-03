@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Manila Official - Reference Number</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://shop.teammanilalifestyle.com/cdn/shop/files/IKULONG-1_590x.jpg?v=1768296179');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo i {
+            color: #ff6b6b;
+            margin-right: 10px;
+            font-size: 40px;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-header {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .card-header h1 {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .card-header p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .success-icon {
+            font-size: 60px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            background: rgba(76, 175, 80, 0.1);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+        }
+        
+        .reference-container {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .reference-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .reference-label {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .reference-number {
+            font-size: 64px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .instructions {
+            background-color: rgba(255, 248, 225, 0.8);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid #ffc107;
+            text-align: left;
+        }
+        
+        .instructions h3 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+        
+        .instructions h3 i {
+            margin-right: 10px;
+            color: #ff9800;
+        }
+        
+        .instructions ul {
+            padding-left: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        .btn-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-width: 200px;
+        }
+        
+        .btn-primary {
+            background: #ff6b6b;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn-primary:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        
+        .btn-secondary:hover {
+            background: #f5f5f5;
+            transform: translateY(-3px);
+            border-color: #ff6b6b;
+            color: #ff6b6b;
+        }
+        
+        .watermark {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0.1;
+            font-size: 80px;
+            color: #333;
+            font-weight: 800;
+            letter-spacing: 5px;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+        
+        .footer-text {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+        
+        .footer-text a {
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+        
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Animation for the reference number */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        
+        .reference-number {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                padding: 30px 25px;
+            }
+            
+            .card-header h1 {
+                font-size: 26px;
+            }
+            
+            .card-header p {
+                font-size: 16px;
+            }
+            
+            .reference-number {
+                font-size: 48px;
+                letter-spacing: 5px;
+            }
+            
+            .btn {
+                padding: 14px 30px;
+                font-size: 16px;
+                min-width: 180px;
+            }
+            
+            .watermark {
+                font-size: 50px;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                padding: 25px 20px;
+            }
+            
+            .reference-number {
+                font-size: 36px;
+                letter-spacing: 3px;
+            }
+            
+            .reference-container {
+                padding: 20px;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .watermark {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-crown"></i>
+            <span>TEAM MANILA OFFICIAL</span>
+        </div>
+        
+        <div class="card">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <div class="card-header">
+                <h1>Team Manila Official Reference No.</h1>
+                <p>This is your Reference Number. Thank you for submitting your application to <strong>Team Manila Official</strong>.</p>
+            </div>
+            
+            <div class="reference-container">
+                <div class="reference-label">YOUR REFERENCE NUMBER</div>
+                <div class="reference-number">4474</div>
+            </div>
+            
+            <div class="instructions">
+                <h3><i class="fas fa-camera"></i> Important Instructions</h3>
+                <ul>
+                    <li>Please take a screenshot of this page for your records</li>
+                    <li>Save this reference number for all future communications with us</li>
+                    <li>You will need this reference number to check your application status</li>
+                    <li>If you have any questions, please contact support with this reference number</li>
+                </ul>
+            </div>
+            
+            <div class="btn-container">
+                <button class="btn btn-primary" id="screenshotBtn">
+                    <i class="fas fa-camera"></i> Take Screenshot
+                </button>
+                <button class="btn btn-secondary" id="homeBtn">
+                    <i class="fas fa-home"></i> Return Home
+                </button>
+                <button class="btn btn-secondary" id="printBtn">
+                    <i class="fas fa-print"></i> Print This Page
+                </button>
+            </div>
+            
+            <div class="watermark">TEAM MANILA</div>
+        </div>
+        
+        <div class="footer-text">
+            <p>This reference number confirms that your application has been received by Team Manila Official. 
+            Please allow 3-5 business days for processing. <a href="#">Contact Support</a> | <a href="#">Check Application Status</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the buttons
+            const screenshotBtn = document.getElementById('screenshotBtn');
+            const homeBtn = document.getElementById('homeBtn');
+            const printBtn = document.getElementById('printBtn');
+            
+            // Screenshot button functionality
+            screenshotBtn.addEventListener('click', function() {
+                // In a real app, this would use a screenshot library
+                // For this demo, we'll show a message
+                alert('Screenshot functionality would be implemented here. For now, please use your device\'s screenshot feature (Ctrl+PrtScn on Windows, Cmd+Shift+4 on Mac).');
+                
+                // Visual feedback
+                this.innerHTML = '<i class="fas fa-check"></i> Screenshot Suggested';
+                this.style.background = '#4CAF50';
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-camera"></i> Take Screenshot';
+                    this.style.background = '';
+                }, 2000);
+            });
+            
+            // Home button functionality
+            homeBtn.addEventListener('click', function() {
+                alert('Returning to Team Manila Official homepage...');
+                // In a real application, this would redirect to the homepage
+                // window.location.href = 'https://www.teammanila.com';
+            });
+            
+            // Print button functionality
+            printBtn.addEventListener('click', function() {
+                window.print();
+            });
+            
+            // Add a click effect to the reference number
+            const refNumber = document.querySelector('.reference-number');
+            refNumber.addEventListener('click', function() {
+                // Copy to clipboard functionality
+                const textToCopy = this.textContent;
+                navigator.clipboard.writeText(textToCopy)
+                    .then(() => {
+                        // Visual feedback that text was copied
+                        const originalText = this.textContent;
+                        this.textContent = 'COPIED!';
+                        this.style.color = '#ffeb3b';
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.style.color = '';
+                        }, 1500);
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy: ', err);
+                        alert('Unable to copy reference number. Please select and copy manually.');
+                    });
+            });
+            
+            // Add tooltip for reference number
+            refNumber.title = "Click to copy to clipboard";
+        });
+    </script>
+</body>
+</html>
